@@ -1,0 +1,101 @@
+Temat zadania: Kalkulator BMI z walidacją danych
+Opis zadania:
+Utwórz interaktywną stronę internetową, która pozwoli użytkownikowi obliczyć BMI (Body Mass Index) na podstawie podanych danych (wagi i wzrostu). Strona ma zawierać:
+1.	Formularz umożliwiający wprowadzenie:
+o	Wagi (w kilogramach, liczba zmiennoprzecinkowa).
+o	Wzrostu (w centymetrach, liczba całkowita).
+2.	Mechanizm walidacji danych wejściowych:
+o	Sprawdzenie, czy pola nie są puste.
+o	Sprawdzenie, czy waga i wzrost są liczbami dodatnimi.
+o	W przypadku błędnych danych wyświetlenie komunikatu o błędzie.
+3.	Przycisk, który po kliknięciu obliczy BMI.
+4.	Wynik BMI wyświetlony dynamicznie na stronie wraz z interpretacją wyniku według standardowych kategorii:
+o	Niedowaga (BMI < 18.5)
+o	Waga prawidłowa (18.5 ≤ BMI < 25)
+o	Nadwaga (25 ≤ BMI < 30)
+o	Otyłość (BMI ≥ 30)
+5.	Stylizacja CSS sprawiająca, że aplikacja jest estetyczna i czytelna.
+________________________________________
+Wymagania techniczne:
+1.	HTML:
+o	Struktura strony z formularzem, przyciskiem i miejscem na wynik.
+2.	CSS:
+o	Stylizacja formularza i wyniku.
+o	Użycie prostego systemu kolorów do wyróżnienia kategorii BMI (np. zielony dla wagi prawidłowej, czerwony dla otyłości).
+3.	JavaScript:
+o	Walidacja danych wejściowych.
+o	Obliczenie BMI na podstawie wzoru: BMI=waga (kg)(wzrost (cm)100)2BMI = \frac{\text{waga (kg)}}{\left(\frac{\text{wzrost (cm)}}{100}\right)^2}BMI=(100wzrost (cm))2waga (kg)
+o	Wyświetlenie wyniku wraz z kategorią BMI.
+________________________________________
+Kryteria oceny:
+1.	Poprawność działania aplikacji (40%):
+o	Prawidłowe obliczanie BMI.
+o	Dynamiczne wyświetlanie wyniku.
+2.	Walidacja danych (20%):
+o	Obsługa błędów i wyświetlanie odpowiednich komunikatów.
+3.	Wygląd strony (20%):
+o	Przejrzysta i estetyczna stylizacja CSS.
+4.	Kod JavaScript (20%):
+o	Czytelność, komentarze i zastosowanie dobrych praktyk programistycznych.
+
+
+
+Temat zadania: Interaktywny system oceniania uczniów z zapisem danych w tablicy
+________________________________________
+Opis zadania:
+Stwórz interaktywną aplikację webową w JavaScript, która umożliwia nauczycielowi ocenianie uczniów i zapis wyników w lokalnej pamięci przeglądarki (localStorage). Aplikacja ma działać jako narzędzie do zarządzania ocenami.
+Strona powinna umożliwiać:
+1.	Dodawanie uczniów
+o	Formularz pozwala dodać nowego ucznia (imię i nazwisko).
+o	Dane są zapisywane w lokalnej pamięci przeglądarki.
+2.	Wyświetlanie listy uczniów
+o	Lista wyświetla imiona i nazwiska uczniów oraz przyciski umożliwiające dodawanie ocen.
+3.	Dodawanie ocen do ucznia
+o	Przy każdym uczniu znajduje się przycisk "Dodaj ocenę", który otwiera formularz umożliwiający wprowadzenie oceny (wartości od 1 do 6).
+o	Oceny są przechowywane w tablicy przypisanej do danego ucznia i zapisywane w tablicy.
+4.	Wyświetlanie średniej ocen
+o	Dla każdego ucznia wyświetlana jest średnia ocen obliczana na podstawie dodanych ocen.
+5.	Usuwanie danych ucznia
+o	Lista umożliwia usunięcie ucznia i jego ocen z tablicy.
+________________________________________
+Wymagania techniczne:
+1.	HTML:
+o	Struktura strony zawierająca formularz dodawania uczniów, dynamiczną listę uczniów oraz miejsce na średnie ocen.
+2.	CSS:
+o	Stylizacja tabeli i formularzy.
+o	Wyraźne podkreślenie funkcji interaktywnych (np. przyciski dodawania/usuwania uczniów i ocen).
+3.	JavaScript:
+o	Użycie tablicy do przechowywania danych.
+o	Operacje na tablicach do zarządzania ocenami.
+o	Dynamiczne generowanie elementów DOM (dodawanie uczniów, wyświetlanie ocen, obliczanie średnich).
+________________________________________
+Wskazówki techniczne:
+1.	Dodawanie ucznia:
+o	Formularz przesyła dane do funkcji w JS, która tworzy nowy obiekt ucznia (np. {name: "Jan Kowalski", grades: []}).
+2.	Obiekt jest dodawany do tablicy uczniów
+3.	Wyświetlanie listy uczniów:
+o	Odczytaj dane z localStorage i dynamicznie wygeneruj listę uczniów z ich imionami, średnią ocen oraz przyciskami.
+4.	Dodawanie ocen:
+o	Formularz pozwala wprowadzić ocenę do wybranego ucznia. Ocena jest zapisywana w jego tablicy grades i aktualizowana w localStorage.
+5.	Usuwanie ucznia:
+o	Kliknięcie przycisku usuwa obiekt ucznia z tablicy w localStorage i odświeża wyświetlaną listę.
+6.	Obliczanie średniej ocen:
+o	Funkcja oblicza średnią na podstawie wartości w tablicy grades. Jeśli tablica jest pusta, średnia powinna wynosić "Brak ocen".
+
+
+Opis zadania:
+Stwórz prostą stronę internetową z formularzem, który pozwoli użytkownikowi obliczyć średnią ocen ucznia na podstawie wprowadzonych wartości.
+________________________________________
+Specyfikacja funkcjonalności:
+1.	Formularz:
+o	Użytkownik wprowadza imię i nazwisko ucznia.
+o	Wprowadza maksymalnie 5 ocen (w postaci liczb od 1 do 6).
+o	Przycisk „Oblicz średnią” generuje wynik.
+2.	Wynik:
+o	Po kliknięciu przycisku na stronie wyświetlana jest średnia ocen wraz z imieniem i nazwiskiem ucznia.
+o	Jeśli użytkownik nie poda żadnej oceny, wyświetlany jest komunikat „Brak ocen do obliczenia”.
+3.	Walidacja danych:
+o	Użytkownik musi wprowadzić przynajmniej jedną ocenę w przedziale od 1 do 6.
+o	Jeśli wprowadzi błędną wartość (np. tekst zamiast liczby lub ocenę poza zakresem), pojawia się komunikat o błędzie.
+
+
